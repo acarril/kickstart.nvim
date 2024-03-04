@@ -726,14 +726,15 @@ require('lazy').setup {
     priority = 1000, -- make sure to load this before all the other start plugins
     config = function()
       -- Configure colorscheme with transparent background
-      -- HACK: this should work with opts = {}, but it doesn't
+      -- NOTE: this should work with opts = {}? I think `config` runs before `opts`
+      -- so the colorscheme is set before passing opts.
       require('nightfox').setup { options = { transparent = true } }
 
       -- Load the colorscheme here
       vim.cmd.colorscheme 'nordfox'
 
       -- You can configure highlights by doing something like
-      vim.cmd.hi 'Comment gui=none'
+      vim.cmd.hi 'Comment gui=italic'
     end,
   },
 
