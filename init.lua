@@ -735,10 +735,19 @@ require('lazy').setup {
     lazy = false, -- make sure we load this during startup if it is your main colorscheme
     priority = 1000, -- make sure to load this before all the other start plugins
     config = function()
-      -- Configure colorscheme with transparent background
+      -- Returns the palette of the specified colorscheme
+      local palette = require('nightfox.palette').load 'nightfox'
+      -- Configure colorscheme with transparent background plus some tweaks
       -- NOTE: this should work with opts = {}? I think `config` runs before `opts`
       -- so the colorscheme is set before passing opts.
-      require('nightfox').setup { options = { transparent = true } }
+      require('nightfox').setup {
+        options = { transparent = true },
+        groups = {
+          nordfox = {
+            TelescopeBorder = { fg = palette.orange.bright },
+          },
+        },
+      }
 
       -- Load the colorscheme here
       vim.cmd.colorscheme 'nordfox'
