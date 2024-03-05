@@ -738,7 +738,7 @@ require('lazy').setup {
     priority = 1000, -- make sure to load this before all the other start plugins
     config = function()
       -- Returns the palette of the specified colorscheme
-      local palette = require('nightfox.palette').load 'nightfox'
+      local palette = require('nightfox.palette').load 'nordfox'
       -- Configure colorscheme with transparent background plus some tweaks
       -- NOTE: this should work with opts = {}? I think `config` runs before `opts`
       -- so the colorscheme is set before passing opts.
@@ -746,7 +746,7 @@ require('lazy').setup {
         options = { transparent = true },
         groups = {
           nordfox = {
-            TelescopeBorder = { fg = palette.orange.bright },
+            TelescopeBorder = { fg = palette.cyan.dim },
           },
         },
       }
