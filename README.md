@@ -5,8 +5,8 @@
 A starting point for Neovim that is:
 
 * Small
-* Single-file
-* Completely Documented
+* ~Single-file~ Modular
+* ~Completely~ Partially Documented
 
 **NOT** a Neovim distribution, but instead a starting point for your configuration.
 
