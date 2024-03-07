@@ -11,11 +11,11 @@ return {
       -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
       {
         'j-hui/fidget.nvim',
-        -- opts = {
-        --   notification = {
-        --     window = { normal_hl = 'Info', winblend = 0, border = 'single' },
-        --   },
-        -- },
+        opts = {
+          notification = {
+            window = { winblend = 0, border = 'single', border_hl = 'Normal' },
+          },
+        },
       },
     },
     config = function()
