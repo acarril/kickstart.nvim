@@ -55,3 +55,6 @@ vim.opt.scrolloff = 10
 
 -- Term GUI colors
 vim.opt.termguicolors = true
+
+-- Show line breaks
+vim.opt.showbreak = '↪'
