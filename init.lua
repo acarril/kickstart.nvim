@@ -38,13 +38,15 @@ require 'lazy-bootstrap'
 
 -- [[ Configure and install plugins ]]
 
-require('lazy').setup {
+require('lazy').setup({
   -- Import all plugins in lua/plugins
   { import = 'plugins' },
 
   -- Detect tabstop and shiftwidth automatically
   { 'tpope/vim-sleuth' },
-}
+}, {
+  change_detection = { notify = false },
+})
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
