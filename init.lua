@@ -45,6 +45,7 @@ require('lazy').setup({
   -- Detect tabstop and shiftwidth automatically
   { 'tpope/vim-sleuth' },
 }, {
+  -- Lazy.nvim configuration options
   change_detection = { notify = false },
 })
 
