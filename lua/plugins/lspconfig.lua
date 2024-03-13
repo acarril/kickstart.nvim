@@ -13,7 +13,7 @@ return {
         'j-hui/fidget.nvim',
         opts = {
           notification = {
-            window = { winblend = 0, border = 'single', border_hl = 'Normal' },
+            window = { winblend = 0, border = 'rounded', border_hl = 'Normal' },
           },
         },
       },
